@@ -1,5 +1,9 @@
+import useExample from "../hooks/useExample";
+
 const Example = () => {
-  return <div>Example</div>;
+  const { data, setData } = useExample();
+
+  return <div>{data}</div>;
 };
 
 export default Example;

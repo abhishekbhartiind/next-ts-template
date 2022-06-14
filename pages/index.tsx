@@ -12,8 +12,6 @@ const Container = styled.div`
 `;
 
 const Home: NextPage = () => {
-  const { data, setData } = useExample();
-
   return (
     <Container>
       <Example />
