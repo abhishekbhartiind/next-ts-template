@@ -1,4 +1,4 @@
-import useExample from "../hooks/useExample";
+import useExample from "../../hooks/useExample";
 
 const Example = () => {
   const { data, setData } = useExample();

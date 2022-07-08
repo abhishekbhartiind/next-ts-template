@@ -1,7 +1,8 @@
-import type { NextPage } from 'next'
-import Example from '../components/test';
-import useExample from '../hooks/useExample'
-import styled from 'styled-components'
+import type { NextPage } from 'next';
+import useExample from '../hooks/useExample';
+import styled from 'styled-components';
+import Post from '../components/Compound/Post'
+import Example from '../components/Example/Example';
 
 const Container = styled.div`
   width: 100%;
@@ -14,9 +15,13 @@ const Container = styled.div`
 const Home: NextPage = () => {
   return (
     <Container>
-      <Example />
+      <Post>
+        <Post.Title />
+        <Post.Comment />
+        <Post.Buttons />
+      </Post>
     </Container>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
