@@ -1,8 +1,7 @@
 import type { NextPage } from 'next';
-import useExample from '../hooks/useExample';
 import styled from 'styled-components';
-import Post from '../components/Compound/Post'
-import Example from '../components/Example/Example';
+import Post from '@components/Compound/Post'
+import Example from '@components/Example/Example';
 
 const Container = styled.div`
   width: 100%;

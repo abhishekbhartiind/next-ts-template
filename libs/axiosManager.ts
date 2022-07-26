@@ -1,21 +1,23 @@
-import axios from 'axios';
+import axios, { AxiosRequestConfig } from 'axios';
 
-const baseUrl = 'http://localhost:5000';
+const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
 
-export const getRequest = async <T>(url: string, query?: string, config?: any): Promise<T> => {
-  const reqQuery = `${query && query.length > 0 ? `?${query}` : ''}`;
+const getConfig = (): AxiosRequestConfig => {
+  const config: AxiosRequestConfig = {};
 
-  const result = axios.get<T>(baseUrl + url + reqQuery, config).then((resp) => {
-    return resp.data;
-  });
-
-  return result;
+  return config;
 };
 
-export const postRequest = async <T>(url: string, body: any, config?: any, onError?: (e: any) => void): Promise<T> => {
-  const result = axios.post<T>(baseUrl + url, body, config).then((resp) => {
-    return resp.data;
-  });
+export const getRequest = async <T>(url: string, query?: string): Promise<T> => {
+  const reqQuery = `${query && query.length > 0 ? `?${query}` : ''}`;
 
-  return result;
+  const result = await axios.get<T>(baseUrl + url + reqQuery, getConfig());
+
+  return result.data;
+};
+
+export const postRequest = async <T>(url: string, body: any): Promise<T> => {
+  const result = await axios.post<T>(baseUrl + url, body, getConfig());
+
+  return result.data;
 };
