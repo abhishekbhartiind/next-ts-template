@@ -15,3 +15,14 @@
 1. npm install yarn -g
 2. yarn set version berry
 3. yarn
+
+## Using Styled-Component
+1. Layout: Top Component
+2. Box: div Tag Component
+3. Section: section Tag Component
+4. List: ul Tag Component
+5. Item: li Tag Component
+6. Paragraph: p Tag Component
+7. Span: span Tag Component
+8. Row: Row Components Wrapper
+9. Col: Column Components Wrapper

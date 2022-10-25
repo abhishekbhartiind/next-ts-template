@@ -9,6 +9,11 @@ const Container = styled.div`
 
   width: 100%;
   height: 100vh;
+
+  ${({ theme }) => theme.mobile} {
+    width: 300px;
+    height: 100vh;
+  }
 `;
 
 const Home: NextPage = () => {

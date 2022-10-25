@@ -21,6 +21,7 @@
       "@interfaces/*": ["interfaces/*"],
       "@libs/*": ["libs/*"],
       "@layouts/*": ["layouts/*"],
+      "@styles/*": ["styles/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_document.tsx"],
