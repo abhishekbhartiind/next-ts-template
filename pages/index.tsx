@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import styled from 'styled-components';
-import Post from '@components/Compound/Post'
+import Post from '@components/CompoundExample/Post'
 
 const Container = styled.div`
   display: flex;
@@ -24,9 +24,9 @@ const Home: NextPage = () => {
         <Post.Comment />
         <Post.Buttons />
         <ul>
-          <li>test</li>
-          <li>test</li>
-          <li>test</li>
+          <li>style reset test</li>
+          <li>style reset test</li>
+          <li>style reset test</li>
         </ul>
       </Post>
     </Container>
