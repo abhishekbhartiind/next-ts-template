@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import styled from 'styled-components';
 import Post from '@components/CompoundExample/Post'
 
-const Container = styled.div`
+const MainLayout = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,9 +16,9 @@ const Container = styled.div`
   }
 `;
 
-const Home: NextPage = () => {
+const Main: NextPage = () => {
   return (
-    <Container>
+    <MainLayout>
       <Post>
         <Post.Title />
         <Post.Comment />
@@ -29,8 +29,8 @@ const Home: NextPage = () => {
           <li>style reset test</li>
         </ul>
       </Post>
-    </Container>
+    </MainLayout>
   );
 };
 
-export default Home;
+export default Main;
