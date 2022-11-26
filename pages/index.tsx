@@ -2,10 +2,11 @@ import type { NextPage } from 'next';
 import styled from 'styled-components';
 import Post from '@components/CompoundExample/Post'
 
-const MainLayout = styled.div`
+const MainLayout = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
+  column-gap: 15px;
 
   width: 100%;
   height: 100vh;
@@ -19,16 +20,19 @@ const MainLayout = styled.div`
 const Main: NextPage = () => {
   return (
     <MainLayout>
-      <Post>
-        <Post.Title />
-        <Post.Comment />
-        <Post.Buttons />
+      <section>
+        <Post>
+          <Post.Title />
+          <Post.Comment />
+          <Post.Buttons />
+        </Post>
+      </section>
+      <section>
         <ul>
-          <li>style reset test</li>
-          <li>style reset test</li>
-          <li>style reset test</li>
+          <li>style reset test(list)</li>
+          <button>style reset test(button)</button>
         </ul>
-      </Post>
+      </section>
     </MainLayout>
   );
 };
