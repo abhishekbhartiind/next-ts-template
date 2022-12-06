@@ -1,3 +1,3 @@
-export interface Example {
+export interface IExample {
     example: string;
 }

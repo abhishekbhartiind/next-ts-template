@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
 import styled from 'styled-components';
 import Post from '@components/CompoundExample/Post'
+import { dehydrate, QueryClient, useQuery } from 'react-query';
+import { getExampleData } from '@libs/api/example';
 
 const MainLayout = styled.main`
   display: flex;
@@ -17,7 +19,8 @@ const MainLayout = styled.main`
   }
 `;
 
-const Main: NextPage = () => {
+const MainPage: NextPage = (props) => {
+  const { data } = useQuery('example', getExampleData)
   return (
     <MainLayout>
       <section>
@@ -27,6 +30,7 @@ const Main: NextPage = () => {
           <Post.Buttons />
         </Post>
       </section>
+      {data.name}
       <section>
         <ul>
           <li>style reset test(list)</li>
@@ -37,4 +41,15 @@ const Main: NextPage = () => {
   );
 };
 
-export default Main;
+export const getServerSideProps = async () => {
+  const queryClient = new QueryClient();
+  await queryClient.prefetchQuery('example', getExampleData)
+
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient)
+    }
+  }
+}
+
+export default MainPage;
