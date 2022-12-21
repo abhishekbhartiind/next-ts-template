@@ -1,15 +1,11 @@
 # Next.js + TypeScript Template
 
 ## Core
-![Next](https://img.shields.io/badge/-Next.js-green?style=for-the-badge&logo=next.js)
-![Yarn Berry](https://img.shields.io/badge/-Yarn__Berry-green?style=for-the-badge&logo=yarn)
-![TypeScript](https://img.shields.io/badge/-TypeScript-green?style=for-the-badge&logo=typescript)
-![axios](https://img.shields.io/badge/-axios-green?style=for-the-badge&logo=axios)
-![StyledComponent](https://img.shields.io/badge/-Styled--Component-green?style=for-the-badge&logo=style)
-
-## State Management Library
-1. React-Query (for Server State)
-2. Zustand (for Client State)
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+![React Query](https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white)
 
 ## Yarn Berry 
 1. npm install yarn -g
