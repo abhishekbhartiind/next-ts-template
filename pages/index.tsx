@@ -1,8 +1,8 @@
-import type { NextPage } from 'next';
-import styled from 'styled-components';
-import Post from '@components/CompoundExample/Post'
-import { dehydrate, QueryClient, useQuery } from 'react-query';
+import Post from '@components/CompoundExample/Post';
 import { getExampleData } from '@libs/api/example';
+import type { NextPage } from 'next';
+import { dehydrate, QueryClient, useQuery } from 'react-query';
+import styled from 'styled-components';
 
 const MainLayout = styled.main`
   display: flex;
@@ -19,8 +19,8 @@ const MainLayout = styled.main`
   }
 `;
 
-const MainPage: NextPage = (props) => {
-  const { data } = useQuery('example', getExampleData)
+const MainPage: NextPage = () => {
+  const { data } = useQuery('example', getExampleData);
   return (
     <MainLayout>
       <section>
@@ -43,13 +43,13 @@ const MainPage: NextPage = (props) => {
 
 export const getServerSideProps = async () => {
   const queryClient = new QueryClient();
-  await queryClient.prefetchQuery('example', getExampleData)
+  await queryClient.prefetchQuery('example', getExampleData);
 
   return {
     props: {
-      dehydratedState: dehydrate(queryClient)
-    }
-  }
-}
+      dehydratedState: dehydrate(queryClient),
+    },
+  };
+};
 
 export default MainPage;

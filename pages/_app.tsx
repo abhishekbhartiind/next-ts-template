@@ -1,11 +1,11 @@
-import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
-import { ReactQueryDevtools } from 'react-query/devtools';
-import type { AppProps } from 'next/app';
-import { ThemeProvider } from 'styled-components';
+import Footer from '@components/Layout/Footer';
+import NavBar from '@components/Layout/NavBar';
 import { GlobalStyle } from '@styles/global';
 import theme from '@styles/theme';
-import NavBar from '@components/Layout/NavBar';
-import Footer from '@components/Layout/Footer';
+import type { AppProps } from 'next/app';
+import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+import { ThemeProvider } from 'styled-components';
 
 const queryClient = new QueryClient();
 

@@ -1,5 +1,7 @@
-import React, { ReactElement } from 'react';
-import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
+import type { DocumentContext, DocumentInitialProps } from 'next/document';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
+import type { ReactElement } from 'react';
+import React from 'react';
 import { ServerStyleSheet } from 'styled-components';
 
 class MyDocument extends Document {
@@ -28,11 +30,11 @@ class MyDocument extends Document {
     }
   }
 
+  // eslint-disable-next-line class-methods-use-this
   render(): ReactElement {
     return (
       <Html>
-        <Head lang="ko">
-        </Head>
+        <Head lang="ko"></Head>
         <body>
           <Main />
           <NextScript />

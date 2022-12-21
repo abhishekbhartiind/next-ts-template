@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const NavBarLayout = styled.nav`
   position: sticky;
@@ -11,7 +11,7 @@ const NavBarLayout = styled.nav`
   height: 50px;
 
   box-shadow: 0 6px 13px 0px rgb(0 0 0 / 15%);
-`
+`;
 
 const NavBar = () => {
   return <NavBarLayout>NavBar</NavBarLayout>;
