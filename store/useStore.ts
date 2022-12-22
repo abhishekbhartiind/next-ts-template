@@ -11,7 +11,7 @@ export const useGlobalStore = create<State>((set, get) => ({
   isData: () => get().data !== null,
   setData: (data: string) => {
     set((state) => ({
-      data: data
+      data,
     }));
   },
 }));

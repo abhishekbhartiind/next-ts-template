@@ -9,7 +9,6 @@ const useNotification = (title: string, options: { body: string }) => {
         if (permission === 'granted') {
           new Notification(title, options);
         } else {
-          return;
         }
       });
     } else {

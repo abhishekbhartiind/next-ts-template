@@ -1,18 +1,18 @@
-import { useState } from "react"
+import { useState } from 'react';
 
 const useCustomHook = () => {
-  const [data, setData] = useState<string | null>(null)
+  const [data, setData] = useState<string | null>(null);
   const isDataExist = () => {
-    return data !== null
-  }
+    return data !== null;
+  };
 
   return {
     data,
     setData,
-    isDataExist
-  }
-}
+    isDataExist,
+  };
+};
 
-export type ICustomHook = ReturnType<typeof useCustomHook>
+export type ICustomHook = ReturnType<typeof useCustomHook>;
 
-export default useCustomHook
+export default useCustomHook;

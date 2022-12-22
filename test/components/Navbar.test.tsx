@@ -8,7 +8,7 @@ describe('Navbar Test', () => {
     render(
       <Wrapper>
         <NavBar />
-      </Wrapper>
+      </Wrapper>,
     );
 
     await screen.findByText(/NavBar/);

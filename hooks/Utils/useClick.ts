@@ -5,7 +5,7 @@ const useClick = (onClick: () => void) => {
   const element = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const current = element.current;
+    const { current } = element;
 
     if (current) {
       current.addEventListener('click', onClick);

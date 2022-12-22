@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { useQueryClient } from "react-query";
+import { useEffect, useState } from 'react';
+import { useQueryClient } from 'react-query';
 
 export function useQueriesLoading() {
   const client = useQueryClient();
@@ -16,5 +16,5 @@ export function useQueriesLoading() {
       setQueryChangedCount((prevState) => prevState - 1);
     }
   }, [queries]);
-  return queryChangedCount >= 0
+  return queryChangedCount >= 0;
 }

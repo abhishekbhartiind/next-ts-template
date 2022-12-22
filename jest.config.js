@@ -8,7 +8,7 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   moduleNameMapper: {
     // Handle module aliases (this will be automatically configured for you soon)
-    "^@(pages|components|hooks|interfaces|libs|layouts|styles)/(.+)$": "<rootDir>/$1/$2",
+    '^@(pages|components|hooks|interfaces|libs|layouts|styles)/(.+)$': '<rootDir>/$1/$2',
     '^@/(.*)$': '<rootDir>/$1',
     '^@/public/(.*)$': '<rootDir>/$1',
   },
@@ -19,7 +19,7 @@ const customJestConfig = {
     './pages/**/*.{js,jsx,ts,tsx}',
     './components/**/*.{js,jsx,ts,tsx}',
     '!./pages/_app.tsx',
-    '!./pages/_document.tsx'
+    '!./pages/_document.tsx',
   ],
   coverageThreshold: {
     global: {

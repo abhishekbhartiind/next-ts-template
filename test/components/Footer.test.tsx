@@ -8,7 +8,7 @@ describe('Footer Test', () => {
     render(
       <Wrapper>
         <Footer />
-      </Wrapper>
+      </Wrapper>,
     );
 
     await screen.findByText(/Footer/);

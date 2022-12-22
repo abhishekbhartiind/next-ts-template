@@ -1,4 +1,4 @@
-import { useRef, useEffect, useCallback } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
 const useScrollFadeIn = (direction = 'up', duration = 1, delay = 0) => {
   const element = useRef<HTMLDivElement | HTMLHeadingElement | HTMLParagraphElement | null>(null);
@@ -14,7 +14,6 @@ const useScrollFadeIn = (direction = 'up', duration = 1, delay = 0) => {
       case 'right':
         return 'translate3d(-50%, 0, 0)';
       default:
-        return;
     }
   };
 
