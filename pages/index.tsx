@@ -23,6 +23,7 @@ const MainPage: NextPage = () => {
   const { data } = useQuery('example', getExampleData);
   return (
     <MainLayout>
+      <h1>main</h1>
       <section>
         <Post>
           <Post.Title />
@@ -30,7 +31,7 @@ const MainPage: NextPage = () => {
           <Post.Buttons />
         </Post>
       </section>
-      {data.name}
+      {data ? data.name : 'loading'}
       <section>
         <ul>
           <li>style reset test(list)</li>

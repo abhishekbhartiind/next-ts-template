@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    dirs: ['.'],
+  },
   reactStrictMode: true,
   compiler: {
     styledComponents: {
@@ -8,6 +11,6 @@ const nextConfig = {
     },
     removeConsole: false,
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

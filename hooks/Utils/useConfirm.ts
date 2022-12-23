@@ -1,8 +1,4 @@
-const useConfirm = (
-  message: string = '',
-  onConfirm: () => void,
-  onCancel: () => void
-) => {
+const useConfirm = (onConfirm: () => void, onCancel: () => void, message: string = '') => {
   const confirmAction = () => {
     if (window.confirm(message)) {
       onConfirm();

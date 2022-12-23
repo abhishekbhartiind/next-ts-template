@@ -1,8 +1,5 @@
-import defaultAxios, {
-  AxiosError,
-  AxiosRequestConfig,
-  AxiosResponse,
-} from 'axios';
+import type { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
+import defaultAxios from 'axios';
 import { useEffect, useState } from 'react';
 
 interface AxiosOptions {

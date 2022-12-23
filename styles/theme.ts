@@ -10,4 +10,4 @@ const theme = {
   desktop: `@media (min-width: ${size.desktop})`,
 };
 
-export default theme
+export default theme;
