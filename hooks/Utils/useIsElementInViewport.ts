@@ -6,12 +6,16 @@ export const useIsElementInViewport = (options?: IntersectionObserverInit) => {
 
   const callback = (entries: IntersectionObserverEntry[]) => {
     const [entry] = entries;
-    setIsVisible(entry.isIntersecting);
+    if (entry) {
+      setIsVisible(entry.isIntersecting);
+    }
   };
 
   useEffect(() => {
     const observer = new IntersectionObserver(callback, options);
-    elementRef.current && observer.observe(elementRef.current);
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
 
     return () => observer.disconnect();
   }, [elementRef, options]);

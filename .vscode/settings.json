@@ -13,5 +13,5 @@
     // "onStartup": ["all-tests"] // Run all tests upon project launch
   },
   "jest.showCoverageOnLoad": true, // Show code coverage when the project is launched
-  "jest.showTerminalOnLaunch": false, // Don't automatically open test explorer terminal on launch
+  "jest.showTerminalOnLaunch": false // Don't automatically open test explorer terminal on launch
 }

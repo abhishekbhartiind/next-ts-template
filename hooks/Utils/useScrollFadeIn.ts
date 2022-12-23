@@ -14,13 +14,14 @@ const useScrollFadeIn = (direction = 'up', duration = 1, delay = 0) => {
       case 'right':
         return 'translate3d(-50%, 0, 0)';
       default:
+        return 'translate3d(0, 50%, 0)';
     }
   };
 
   const handleScroll: IntersectionObserverCallback = useCallback(
     ([entry]: IntersectionObserverEntry[]) => {
       const { current } = element;
-      if (current && entry.isIntersecting) {
+      if (current && entry && entry.isIntersecting) {
         current.style.transitionProperty = 'all';
         current.style.transitionDuration = `${duration}s`;
         current.style.transitionTimingFunction = 'cubic-bezier(0, 0, 0.2, 1)';
