@@ -18,5 +18,16 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     overflow: visible;
     cursor: pointer;
+    font: inherit;
+  }
+
+  .only-mobile {
+    display: none !important;
+  }
+
+  @media all and (max-width: 480px) {
+    .only-pc {
+      display: none !important;
+    }
   }
 `;
