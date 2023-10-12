@@ -14,7 +14,7 @@ const NavBarLayout = styled.nav`
 `;
 
 const NavBar = () => {
-  return <NavBarLayout>NavBar</NavBarLayout>;
+  return <NavBarLayout>특허 분석 사이트 (맞음)</NavBarLayout>;
 };
 
 export default NavBar;

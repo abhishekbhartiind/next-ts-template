@@ -1,7 +1,4 @@
-import Post from '@components/CompoundExample/Post';
-import { getExampleData } from '@libs/api/example';
 import type { NextPage } from 'next';
-import { dehydrate, QueryClient, useQuery } from 'react-query';
 import styled from 'styled-components';
 
 const MainLayout = styled.main`
@@ -13,44 +10,20 @@ const MainLayout = styled.main`
   width: 100%;
   height: 100vh;
 
+  font-size: 100px;
+
   ${({ theme }) => theme.mobile} {
-    width: 300px;
+    width: 340px;
     height: 100vh;
   }
 `;
 
 const MainPage: NextPage = () => {
-  const { data } = useQuery('example', getExampleData);
   return (
     <MainLayout>
-      <h1>main</h1>
-      <section>
-        <Post>
-          <Post.Title />
-          <Post.Comment />
-          <Post.Buttons />
-        </Post>
-      </section>
-      {data ? data.name : 'loading'}
-      <section>
-        <ul>
-          <li>style reset test(list)</li>
-          <button>style reset test(button)</button>
-        </ul>
-      </section>
+      <h1>다인종 애호가 양승직 화이팅!</h1>
     </MainLayout>
   );
-};
-
-export const getServerSideProps = async () => {
-  const queryClient = new QueryClient();
-  await queryClient.prefetchQuery('example', getExampleData);
-
-  return {
-    props: {
-      dehydratedState: dehydrate(queryClient),
-    },
-  };
 };
 
 export default MainPage;
